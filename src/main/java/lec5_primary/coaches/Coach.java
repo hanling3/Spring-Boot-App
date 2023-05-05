@@ -1,4 +1,4 @@
-package lec4_qualifiers;
+package lec5_primary.coaches;
 
 public interface Coach {
 

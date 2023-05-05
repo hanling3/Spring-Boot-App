@@ -1,8 +1,7 @@
-package lec4_qualifiers.rest;
+package lec5_primary.rest;
 
-import lec4_qualifiers.Coach;
+import lec5_primary.coaches.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +19,7 @@ public class CoachController {
 
     // define a constructor for dependency injection
     @Autowired
-    public CoachController(@Qualifier("baseballCoach") Coach c) {
+    public CoachController(Coach c) {
         myCoach = c;
     }
 
@@ -30,7 +29,11 @@ public class CoachController {
 //        myCoach = c;
 //    }
 
-    @GetMapping("dailyworkout")
+    @GetMapping("/")
+    public String sayHello() {
+        return "Hello World";
+    }
+    @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
         return myCoach.getDailyWorkout();
     }

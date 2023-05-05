@@ -1,9 +1,10 @@
-package lec4_qualifiers.coaches;
+package lec5_primary.coaches;
 
-import lec4_qualifiers.Coach;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary // @Qualifier has a higher priority than @Primary
 public class TrackCoach implements Coach {
     @Override
     public String getDailyWorkout() {

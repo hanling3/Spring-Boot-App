@@ -1,6 +1,5 @@
-package lec4_qualifiers.coaches;
+package lec5_primary.coaches;
 
-import lec4_qualifiers.Coach;
 import org.springframework.stereotype.Component;
 
 @Component
