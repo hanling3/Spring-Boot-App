@@ -1,4 +1,4 @@
-package util;
+package lec2_component_scanning;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package mycoolapp.rest;
+package lec2_component_scanning.rest;
 
-import util.Coach;
+import lec2_component_scanning.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

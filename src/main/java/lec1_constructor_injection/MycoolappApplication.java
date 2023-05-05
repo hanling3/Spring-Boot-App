@@ -1,10 +1,10 @@
-package mycoolapp;
+package lec1_constructor_injection;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(
-		scanBasePackages= { "mycoolapp", "util"}
+		scanBasePackages= {"lec1_constructor_injection", "lec2_component_scanning"}
 )
 public class MycoolappApplication {
 	public static void main(String[] args) {
