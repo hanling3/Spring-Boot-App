@@ -1,4 +1,4 @@
-package lec2_component_scanning;
+package lec4_qualifiers;
 
 public interface Coach {
 

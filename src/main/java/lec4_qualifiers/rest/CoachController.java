@@ -1,7 +1,8 @@
-package lec2_component_scanning.rest;
+package lec4_qualifiers.rest;
 
-import lec2_component_scanning.Coach;
+import lec4_qualifiers.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,16 +19,16 @@ public class CoachController {
      */
 
     // define a constructor for dependency injection
-//    @Autowired
-//    public CoachController(Coach c) {
-//        myCoach = c;
-//    }
-
-    // Setter Injection
     @Autowired
-    public void setCoach(Coach c) {
+    public CoachController(@Qualifier("baseballCoach") Coach c) {
         myCoach = c;
     }
+
+    // Setter Injection
+//    @Autowired
+//    public void setCoach(Coach c) {
+//        myCoach = c;
+//    }
 
     @GetMapping("dailyworkout")
     public String getDailyWorkout() {
