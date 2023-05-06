@@ -1,6 +1,6 @@
-package lec7_bean_scopes.rest;
+package lec8_bean_lifecycle_methods.rest;
 
-import lec7_bean_scopes.coaches.Coach;
+import lec8_bean_lifecycle_methods.coaches.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class CoachController {
     // define a private field for the dependency
     private Coach myCoach;
-    private Coach anotherCoach;
 
     /* Spring Injection Types:
         * Constructor Injection
@@ -21,15 +20,9 @@ public class CoachController {
 
     // define a constructor for dependency injection
     @Autowired
-    public CoachController(
-            @Qualifier("cricketCoach") Coach c,
-            @Qualifier("cricketCoach") Coach a
-            // Default scope is Singleton
-            // ==> All dependency injections for the bean will reference the SAME bean
-    ) {
+    public CoachController(@Qualifier("cricketCoach") Coach c) {
         System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = c;
-        anotherCoach = a;
     }
 
     // Setter Injection
@@ -47,13 +40,4 @@ public class CoachController {
     public String getDailyWorkout() {
         return myCoach.getDailyWorkout();
     }
-
-    @GetMapping("/check")
-    public String check() {
-        return "Comparing beans: myCoach == anotherCoach, " + (myCoach == anotherCoach);
-        // Singleton: true;
-        // Prototype: false;
-    }
-
-
 }

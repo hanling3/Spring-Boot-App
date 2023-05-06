@@ -1,4 +1,4 @@
-package lec7_bean_scopes;
+package lec8_bean_lifecycle_methods;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
