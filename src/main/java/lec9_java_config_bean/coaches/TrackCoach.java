@@ -1,4 +1,4 @@
-package lec8_bean_lifecycle_methods.coaches;
+package lec9_java_config_bean.coaches;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package lec8_bean_lifecycle_methods.rest;
+package lec9_java_config_bean.rest;
 
-import lec8_bean_lifecycle_methods.coaches.Coach;
+import lec9_java_config_bean.coaches.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +20,7 @@ public class CoachController {
 
     // define a constructor for dependency injection
     @Autowired
-    public CoachController(@Qualifier("cricketCoach") Coach c) {
+    public CoachController(@Qualifier("acquatic") Coach c) {
         System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = c;
     }

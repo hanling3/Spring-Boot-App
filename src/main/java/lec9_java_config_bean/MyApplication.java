@@ -1,4 +1,4 @@
-package lec8_bean_lifecycle_methods;
+package lec9_java_config_bean;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

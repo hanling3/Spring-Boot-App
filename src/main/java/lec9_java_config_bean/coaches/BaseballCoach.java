@@ -1,15 +1,15 @@
-package lec8_bean_lifecycle_methods.coaches;
+package lec9_java_config_bean.coaches;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class TennisCoach implements Coach {
+public class BaseballCoach implements Coach {
 
-    public TennisCoach() {
+    public BaseballCoach() {
         System.out.println("In constructor: " + getClass().getSimpleName());
     }
     @Override
     public String getDailyWorkout() {
-        return "Practice backhand volley";
+        return "Spending 30 minutes in batting practice";
     }
 }
