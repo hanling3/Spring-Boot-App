@@ -1,4 +1,4 @@
-package lec5_primary;
+package lec6_lazy_initialization;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,8 @@
-package lec5_primary.rest;
+package lec6_lazy_initialization.rest;
 
-import lec5_primary.coaches.Coach;
+import lec6_lazy_initialization.coaches.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,8 @@ public class CoachController {
 
     // define a constructor for dependency injection
     @Autowired
-    public CoachController(Coach c) {
+    public CoachController(@Qualifier("cricketCoach") Coach c) {
+        System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = c;
     }
 

@@ -1,4 +1,4 @@
-package lec5_primary.coaches;
+package lec6_lazy_initialization.coaches;
 
 public interface Coach {
 
