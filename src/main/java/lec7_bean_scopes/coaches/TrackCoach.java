@@ -1,7 +1,5 @@
-package lec6_lazy_initialization.coaches;
+package lec7_bean_scopes.coaches;
 
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component

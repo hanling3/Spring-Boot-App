@@ -1,4 +1,4 @@
-package lec6_lazy_initialization.coaches;
+package lec7_bean_scopes.coaches;
 
 import org.springframework.stereotype.Component;
 
